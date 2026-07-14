@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>speech.com</title>
+    <!-- <link rel="stylesheet" href="Z:\bootstrap-5.2.0-dist\css\bootstrap.min.css"> -->
+</head>
+<body>
+    <center>
+        <h1><u><i>WELCOME TO LOGIN PAGE</i></u></h1>
+            <textarea id="text-box" cols="50" rows="10"></textarea>
+            <br><button id="btn" >speech</button>
+    </center>
+</body>
+<script>
+    const button=document.querySelector("#btn");
+    const text_box=document.querySelector("#text-box");
+    button.addEventListener("click",() =>{
+        const text=new SpeechSynthesisUtterance(text_box.value)
+        speechSynthesis.speak(text);
+    });
+</script>
+</html>
