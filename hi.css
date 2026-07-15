@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  overflow: hidden;
+}
+
+
+.layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 250vh;
+  background: #fff;
+  box-shadow: inset -10px 0 40px;
+}
+
+.layer.layer1 {
+  background: #222
+    radial-gradient(#6dff73 9px, #000 9px, #000 13px, transparent 13px);
+  background-size: 35px 35px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: 10;
+  animation: animateDots_one 2s linear infinite;
+}
+
+.layer.layer2 {
+  background: #222
+    radial-gradient(#db0aff 9px, #000 9px, #000 13px, transparent 13px);
+  background-size: 35px 35px;
+  transform: translate(-50%, -38%) rotate(45deg);
+  z-index: 8;
+  animation: animateDots_two 2s linear infinite;
+}
+
+.layer.layer3 {
+  background: #222
+    radial-gradient(#03a9f4 9px, #000 9px, #000 13px, transparent 13px);
+  background-size: 35px 35px;
+  transform: translate(-50%, -62%) rotate(45deg);
+  z-index: 8;
+  animation: animateDots_two 2s linear infinite;
+}
+
+.layer.layer4 {
+  background: #222
+    radial-gradient(#ffc107 9px, #000 9px, #000 13px, transparent 13px);
+  background-size: 35px 35px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 11;
+  animation: animateDots_one 2s linear infinite;
+}
+
+.layer.layer5 {
+  background: #222
+    radial-gradient(#e91e63 9px, #000 9px, #000 13px, transparent 13px);
+  background-size: 35px 35px;
+  transform: translate(-50%, -38%) rotate(-45deg);
+  z-index: 9;
+  animation: animateDots_two 2s linear infinite;
+}
+
+.layer.layer6 {
+  background: #222
+    radial-gradient(#0f0 9px, #000 9px, #000 13px, transparent 13px);
+  background-size: 35px 35px;
+  transform: translate(-50%, -62%) rotate(-45deg);
+  z-index: 9;
+  animation: animateDots_two 2s linear infinite;
+}
+
+@keyframes animateDots_one {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 35px -35px;
+  }
+}
+
+@keyframes animateDots_two {
+  0% {
+    background-position: 35px -35px;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+#body {
+  background-color: #fff;
+}
+
+#sp {
+  position: relative;
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  color: white;
+  background: linear-gradient(to top, rgb(255, 0, 238)  0%, rgb(241, 45, 11) 50%, seagreen 100%);
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  color: white;
+  font-family: cambria;
+  transition: 0.5s ease;
+  margin-left: 44.5rem;
+  cursor: wait;
+}
+
+#sp::before {
+  content: "";
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, deeppink 0%, cyan 50%, blue 100%);
+  transition: 0.5s ease;
+  z-index: -1;
+}
+
+#sp:hover::before {
+  width: 9em;
+}
+
+#a,
+#b,
+#c,
+#d,
+#e,
+#f,
+#g,
+#h {
+  position: relative;
+  border-radius: 23px;
+  width: 82.5rem;
+  left: 6.5rem;
+  top: 1rem;
+  background: #e0e0e0;
+  box-shadow: inset 7px 7px 14px #6e6e6e, inset -7px -7px 14px #fff;
+  text-align: justify;
+  font-size: 30px;
+  font-family: cambia;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#a {
+  color: skyblue;
+}
+
+#b {
+  color: #ffd33d;
+}
+
+#c {
+  color: #ff00a8;
+}
+
+#d {
+  color: #00ff3c;
+}
+
+#e {
+  color: rgb(244, 6, 6);
+}
+
+#f {
+  color: #001eff;
+}
+
+#g {
+  color: salmon;
+}
+
+#h {
+  color: #000;
+}
+
+/* #i {
+  color: orangered;
+  font-size: 50px;
+} */
+.cross{
+  height: 3rem;
+  background-color: snow;
+  backdrop-filter: blur(15px);
+  transform: translate(-50%,-50%);
+  transform: rotate(40deg);
+  margin-top: 0;
+  opacity: 0.5;
+}
